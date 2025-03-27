@@ -1,6 +1,7 @@
 import type { JSX } from "react";
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
+import { Navbar } from "../components/Navbar";
 import "./styles.css";
 
 const firaCode = Fira_Code({
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${firaCode.className}`}>
+        <Navbar />
         {children}
       </body>
     </html>
