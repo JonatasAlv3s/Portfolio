@@ -3,7 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NavItem, NavItemInterface } from "../Navitem";
+import { FaBars, FaXmark } from "react-icons/fa6";
 import "./index.css";
+import { useState } from "react";
 
 export function Navbar() {
 
@@ -28,13 +30,15 @@ export function Navbar() {
 
     const pathName = usePathname();
 
+    const [openMenu, setOpenMenu] = useState<boolean>(false);
+
     return (
         <header>
             <nav className="navbar">
                 <Link href="/" className="link-home">
                     Home
                 </Link>
-                <ul className="nav-items">
+                <ul className={`nav-items ${openMenu ? 'open' : ''}`}>
                     {items.map((item, index) => (
                         <NavItem
                             key={index}
@@ -44,7 +48,10 @@ export function Navbar() {
                         />
                     ))}
                 </ul>
+                <button className="btn-mobile" onClick={() => setOpenMenu(!openMenu)}>
+                    {openMenu ? <FaXmark /> : <FaBars />}
+                </button>
             </nav>
-        </header>
+        </header >
     )
 }
