@@ -1,15 +1,19 @@
 'use client';
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NavItem, NavItemInterface } from "../Navitem";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import "./index.css";
+import Image from "next/image";
 import { useState } from "react";
 
 export function Navbar() {
 
     const items: NavItemInterface[] = [
+        {
+            url: "/",
+            label: "Home"
+        },
         {
             url: "/about",
             label: "Sobre"
@@ -35,9 +39,9 @@ export function Navbar() {
     return (
         <header>
             <nav className="navbar">
-                <Link href="/" className="link-home">
-                    Home
-                </Link>
+                <div>
+                    <Image src="/logo.png" alt="logo" width={150} height={80} />
+                </div>
                 <ul className={`nav-items ${openMenu ? 'open' : ''}`}>
                     {items.map((item, index) => (
                         <NavItem
