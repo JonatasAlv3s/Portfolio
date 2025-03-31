@@ -4,8 +4,8 @@ import { usePathname } from "next/navigation";
 import { NavItem, NavItemInterface } from "../Navitem";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import "./index.css";
-import Image from "next/image";
 import { useState } from "react";
+import Image from "next/image";
 
 export function Navbar() {
 

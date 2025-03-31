@@ -2,6 +2,7 @@ import type { JSX } from "react";
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
 import "./styles.css";
 
 const firaCode = Fira_Code({
@@ -23,7 +24,8 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${firaCode.className}`}>
         <Navbar />
-        {children}
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
