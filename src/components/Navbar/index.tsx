@@ -23,7 +23,7 @@ export function Navbar() {
             label: "Skills"
         },
         {
-            url: "/Project",
+            url: "/project",
             label: "Projetos"
         },
         {

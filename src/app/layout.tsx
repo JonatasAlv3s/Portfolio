@@ -23,9 +23,13 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${firaCode.className}`}>
-        <Navbar />
+        <header>
+          <Navbar />
+        </header>
         <main>{children}</main>
-        <Footer />
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );
