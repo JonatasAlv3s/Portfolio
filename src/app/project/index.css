@@ -1,0 +1,111 @@
+.heading {
+    display: inline-block;
+    font-family: "Fira Code", monospace;
+    color: azure;
+    overflow: hidden;
+    margin-top: 2rem;
+    border-right: 2px solid blue;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3.5s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 30ch;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: blue;
+    }
+}
+
+.page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.subheading {
+    font-family: "Fira Code", monospace;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.tags {
+    margin-bottom: 1rem;
+    gap: 2rem;
+}
+
+.tag {
+    background: gray;
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+    margin-right: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.button {
+    background: #0070f3;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.button:hover {
+    background: #0059c1;
+}
